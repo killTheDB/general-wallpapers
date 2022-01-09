@@ -8,7 +8,7 @@ print(onlyfiles)
 readmefile = open('README.md', 'a')
 
 for image in onlyfiles:
-    htmlcode = "<img src=\""+ image + "\"> <br>"
+    htmlcode = "<img src=\""+ image + "\" width=\"400\" height=\"400\"> <br>"
     readmefile.write(htmlcode)
     readmefile.write('\n')
 
