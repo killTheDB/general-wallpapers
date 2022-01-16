@@ -7,7 +7,7 @@ from github import InputGitTreeElement
 mypath = "D:\softwares\wallpapers"
 onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
-print(onlyfiles)
+print(onlyfiles.sort())
 
 readmefile = open('README.md', 'w')
 readmefile.write("<div class=\"row\" style=\"display: flex\"> \n")
