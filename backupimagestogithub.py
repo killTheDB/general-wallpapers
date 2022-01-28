@@ -2,7 +2,8 @@ from os import listdir, read
 from os.path import isfile, join
 import subprocess
 
-from numpy import TooHardError
+def run(*args):
+    return subprocess.check_call(['git'] + list(args))
 
 mypath = "D:\softwares\wallpapers"
 onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
@@ -22,14 +23,16 @@ onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 # readmefile.write("</div>")
 # readmefile.close()
 
-p = subprocess.Popen("C:\Program Files\Git\git-bash.exe",
-bufsize=-1, 
-executable=None, 
-stdin=None, 
-stdout=None, 
-stderr=None, 
-preexec_fn=None, 
-close_fds=True, 
-shell=False, 
-cwd="D:\softwares\wallpapers", 
-)
+# p = subprocess.Popen("C:\Program Files\Git\git-bash.exe git",
+# bufsize=-1, 
+# executable=None, 
+# stdin=None, 
+# stdout=None, 
+# stderr=None, 
+# preexec_fn=None, 
+# close_fds=True, 
+# shell=False, 
+# cwd="D:\softwares\wallpapers", 
+# )
+
+run("add", ".")
