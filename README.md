@@ -249,9 +249,6 @@
 <img src="girl_landscape_art_139823_3840x2160.jpg" width="100%"> <br>
 </div> 
 <div class="column" style="flex: 33.33%; padding: 5px">
-<img src="gitauto.py" width="100%"> <br>
-</div> 
-<div class="column" style="flex: 33.33%; padding: 5px">
 <img src="gold-fish-anime-digital-art-uhdpaper.com-4K-6.1301.jpg" width="100%"> <br>
 </div> 
 <div class="column" style="flex: 33.33%; padding: 5px">
