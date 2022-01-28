@@ -8,31 +8,21 @@ def run(*args):
 mypath = "D:\softwares\wallpapers"
 onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
-# print(onlyfiles.sort())
+print(onlyfiles.sort())
 
-# readmefile = open('README.md', 'w')
-# readmefile.write("<div class=\"row\" style=\"display: flex\"> \n")
-# for image in onlyfiles:
-#     readmefile.write("<div class=\"column\" style=\"flex: 33.33%; padding: 5px\">")
-#     readmefile.write('\n')
-#     htmlcode = "<img src=\""+ image + "\" width=\"100%\"> <br>"
-#     readmefile.write(htmlcode)
-#     readmefile.write('\n')
-#     readmefile.write("</div> \n")
+readmefile = open('README.md', 'w')
+readmefile.write("<div class=\"row\" style=\"display: flex\"> \n")
+for image in onlyfiles:
+    readmefile.write("<div class=\"column\" style=\"flex: 33.33%; padding: 5px\">")
+    readmefile.write('\n')
+    htmlcode = "<img src=\""+ image + "\" width=\"100%\"> <br>"
+    readmefile.write(htmlcode)
+    readmefile.write('\n')
+    readmefile.write("</div> \n")
 
-# readmefile.write("</div>")
-# readmefile.close()
-
-# p = subprocess.Popen("C:\Program Files\Git\git-bash.exe git",
-# bufsize=-1, 
-# executable=None, 
-# stdin=None, 
-# stdout=None, 
-# stderr=None, 
-# preexec_fn=None, 
-# close_fds=True, 
-# shell=False, 
-# cwd="D:\softwares\wallpapers", 
-# )
+readmefile.write("</div>")
+readmefile.close()
 
 run("add", ".")
+run("commit", "-am", "Adding images to README.md using auto commit")
+run("push", "origin","main")
